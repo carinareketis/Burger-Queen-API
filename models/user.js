@@ -1,5 +1,3 @@
-
-// Models são arquivo que vão estruturar o banco de dados
 'use strict';
 
 module.exports = (sequelize, DataTypes) => {

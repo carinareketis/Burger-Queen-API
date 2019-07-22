@@ -1,0 +1,275 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API that integrates with a restaurant interface, whose function is to receive orders and send them to the kitchen.",
+    "version": "1.0.0",
+    "title": "Burger Queen API",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "carina.reketis@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://github.com/carinareketis/Burger-Queen-API"
+    }
+  },
+  "host": "localhost:4577",
+  "tags": [
+    {
+      "name": "users",
+      "description": "Users endpoint"
+    },
+    {
+      "name": "products",
+      "description": "Products endpoint"
+    },
+    {
+      "name": "orders",
+      "description": "Orders endpoint"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Get all users",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Create user",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/users/:id": {
+      "get": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Get user",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Update user",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Delete user",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Get all products",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Create product",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/products/:id": {
+      "get": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Get product",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Update product",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Delete product",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/orders": {
+      "get": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "Get all orders",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "Create order",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/orders/:id": {
+      "get": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "Get order",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "Update order",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "Delete order",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Orders": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string",
+          "description": "User Id"
+        }
+      }
+    },
+    "OrdersProducts": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "orderId": {
+          "type": "integer",
+          "description": "Orders Id"
+        },
+        "productId": {
+          "type": "integer"
+        }
+      }
+    },
+    "Products": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string",
+          "description": "Orders Id"
+        },
+        "price": {
+          "type": "integer"
+        }
+      }
+    },
+    "Users": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "email": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

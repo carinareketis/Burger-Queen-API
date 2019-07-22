@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     Product.hasMany(models.OrdersProducts, {foreignKey: 'productId'});
   };
 
-    // Product.create({name:"Bebida gaseificada 750ml",price:"10"});
+  // Product.create({name:"Bebida gaseificada 750ml",price:"10"});
+  
   return Product;
 };

@@ -20,15 +20,15 @@ const postOrders = (req, res) => Orders.create(req.body , {include: [OrderItem]}
 const putOrders = (req, res) => { Orders.update({...req.body}, {where: {id: req.params.id}})
     .then(() => {
         Orders
-            .findByPk(req.params.id)
-            .then(order => res.send(order))
+        .findByPk(req.params.id)
+        .then(order => res.send(order))
     });
 };
 
 const deleteOrders = (req, res) => {
     OrderItem.destroy({where: { orderId: req.params.id}});
     Orders.destroy({where: { id: req.params.id}})
-        .then(() => res.sendStatus(200));
+    .then(() => res.sendStatus(200));
 };
 
 module.exports = {
